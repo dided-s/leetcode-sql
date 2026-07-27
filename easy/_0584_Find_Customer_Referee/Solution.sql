@@ -1,3 +1,5 @@
+-- sql\leetcode-sql\tables\create_customer1.sql
+
 SELECT name
   FROM customer
  WHERE referee_id != 2
