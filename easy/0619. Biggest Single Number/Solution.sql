@@ -8,8 +8,8 @@ Find the largest single number. If there is no single number, report null.
 The result format is in the following example.
 */
 
-SELECT max(num) as num FROM (
-select num from mynumbers
-GROUP BY num
-HAVING count(*) = 1) as unique_mynumbers
-LIMIT 1;
+SELECT MAX(num) AS num
+  FROM (SELECT num
+          FROM mynumbers
+         GROUP BY num
+        HAVING COUNT(*) = 1) AS unique_mynumbers;
