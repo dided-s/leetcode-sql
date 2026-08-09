@@ -1,0 +1,15 @@
+/*
+1075. Project Employees I
+Write an SQL query that reports the average experience years of all the employees for each project, rounded to 2 digits.
+
+Return the result table in any order.
+
+The query result format is in the following example.
+*/
+
+SELECT project_id,
+       ROUND(AVG(experience_years), 2) AS average_years
+  FROM project
+       LEFT JOIN employee
+       USING (employee_id)
+ GROUP BY project_id;
