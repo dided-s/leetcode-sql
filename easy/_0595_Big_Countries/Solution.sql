@@ -1,4 +1,3 @@
-/* sql\leetcode-sql\tables\create_world1.sql */
 
 SELECT name, population, area
   FROM world
