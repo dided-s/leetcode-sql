@@ -8,7 +8,6 @@ The result format is in the following example.
 Drop FUNCTION if EXISTS getNthHighestSalary;
 CREATE FUNCTION getNthHighestSalary(N INT)
 RETURNS INT
-DETERMINISTIC
 READS SQL DATA
 BEGIN
   SET N = N - 1;
