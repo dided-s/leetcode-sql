@@ -14,3 +14,10 @@ SELECT customers.name AS Customers
        ON customers.id = orders.customerId
  GROUP BY customers.id, customers.name
 HAVING COUNT(orders.id) = 0;
+
+
+SELECT customers.name AS Customers
+  FROM customers
+       LEFT JOIN orders
+       ON customers.id = orders.`customerId`
+ WHERE orders.id is NULL;
