@@ -9,6 +9,6 @@ The result format is in the following example.
 
 SELECT employees.name AS Employee
   FROM employee AS managers
-       LEFT JOIN employee AS employees
-       ON managers.id = employees.managerId
+  JOIN employee AS employees
+    ON managers.id = employees.managerId
  WHERE employees.salary > managers.salary;
